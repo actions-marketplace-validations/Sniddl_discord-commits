@@ -195,12 +195,14 @@ Returns embeds containing a title and description. The title links to the commit
 author's name
 
 ```js
-embed: {
-  title: "{{ commit.title }}",
-  description: "{{ commit.description }}",
-  url: "{{ commit.url }}",
-  author: {
-    name: "{{ commit.author.name }}"
+{
+  embed: {
+    title: "{{ commit.title }}",
+    description: "{{ commit.description }}",
+    url: "{{ commit.url }}",
+    author: {
+      name: "{{ commit.author.name }}"
+    }
   }
 }
 ```
@@ -211,13 +213,15 @@ Returns embeds containing a title and description. The title links to the commit
 author's name and GitHub avatar.
 
 ```js
-embed: {
-  title: "{{ commit.title }}",
-  description: "{{ commit.description }}",
-  url: "{{ commit.url }}",
-  author: {
-    name: "{{ commit.author.name }}",
-    icon_url: "https://github.com/{{ commit.author.username }}.png"
+{
+  embed: {
+    title: "{{ commit.title }}",
+    description: "{{ commit.description }}",
+    url: "{{ commit.url }}",
+    author: {
+      name: "{{ commit.author.name }}",
+      icon_url: "https://github.com/{{ commit.author.username }}.png"
+    }
   }
 }
 ```
