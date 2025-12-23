@@ -13,7 +13,18 @@ commit][commit] in picture.
 
 ## Example Usage
 
-This example will use the `avatar-with-link` template and include an extra embed that says "View All Changes". An embed will be created for every commit as long as the commit message does not start with "fix:" or "feat:". Any part of the footer appearing after the lines starting with tokens "Signed-off-by" or "Co-authored-by" will be removed. 
+The following example is the most commonly used. It uses the `avatar-with-link` template and shows an extra embed that says "View All Changes".
+
+```yaml
+- name: Discord Commits
+  uses: Sniddl/discord-commits@v1.8
+  with:
+    webhook: ${{ secrets.DISCORD_WEBHOOK }}
+    template: "avatar-with-link"
+    include-extras: true
+```
+
+In this more advanced example an embed will be created for every commit as long as the commit message does not start with "fix:" or "feat:". Additionally, any part of the footer appearing after the lines starting with tokens "Signed-off-by" or "Co-authored-by" will be removed. 
 
 ```yaml
 - name: Discord Commits
